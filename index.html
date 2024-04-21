@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changing button</title>
+
+    <style>
+
+   #color-change{
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 10px;
+    height: 30px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    height: 5%;
+    color: black;
+   }
+   
+   
+
+    </style>
+</head>
+<body style="background-color: salmon;" id="body">
+    <button id="color-change">Click Me!</button>
+ <script>
+
+    var background = document.getElementById("body");
+    var Color = document.getElementById("color-change");
+    
+    Color.onclick = Change;
+
+    function Change(){
+    background.style.backgroundColor = "cyan";
+    };
+    Color.addEventListener("dblclick", back );
+    function back(){
+        background.style.backgroundColor ="salmon";
+    };
+ </script>
+</body>
+</html>
